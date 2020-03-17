@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "sfreg";
+    src: url(font\SFPro-Regular.ttf) format("truetype"), local("SF Pro Display Regular");
+}
+
+@font-face {
+    font-family: "sfsemibold";
+    src: url(font\SF-Semibold.otf) format("opentype"), local("SF Pro Display Semibold");
+}
+
+@font-face {
+    font-family: "sfbold";
+    src: url(font\SF-Bold.otf) format("opentype"), local("SF Pro Display Bold");
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: "sfreg", sans-serif;
+  }
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+marquee{
+    margin: 0;
+    font-family: "sfreg";
+    font-size: 14px;
+    color: #000000;
+    background-color: rgb(238, 238, 238);
+    padding: 4px;
+}
+
+h1.header{
+    font-family: "sfsemibold", sans-serif;
+    padding-top: 12px;
+    font-size:36px;
+}
+
+p.sub {
+    padding-top: 12px;
+    font-size:19px;
+}
+
+.semi {
+    font-family: "sfsemibold", sans-serif;
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 8px;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+a.semi:hover {
+    padding-bottom: 1px;
+    border-style: none none solid;
+    border-width: 2px;
+    border-color: #000;
+    color: black;
+}
+
+.subemail {
+    padding-top: 12px;
+    font-size:19px;
+}
+
+a.email {
+    font-family: "sfsemibold", sans-serif;
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    
+}
+
+a:hover {
+    padding-bottom: 5px;
+    border-bottom-color: transparent;
+    
+}
+
+img.pp{
+    border-radius: 50%;
+    width: 70px;
+}
+
+p.footer {
+    padding-top: 15px;
+    padding-bottom: 8px;
+    font-size:19px;
+}
+
+@media only screen and (min-width: 768px) {
+    h1.header{
+        font-size:49px;
+    }
+
+    p.sub {
+        font-size:19px;
+    }
+
+    .subemail {
+        font-size:19px;
+    }
+
+    p.footer {
+        font-size:19px;
+    }
+}

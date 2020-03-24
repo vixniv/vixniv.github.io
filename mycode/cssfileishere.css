@@ -25,6 +25,9 @@ body {
     font-weight: normal;
     line-height: 19px;
     color: #0D0C22;
+
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 .container {
@@ -47,16 +50,22 @@ h1 {
     font-size: 14px;
     line-height: 25px;
     margin-bottom: 5px;
+
+    color: var(--font-sub);
 }
 
 .back {
     text-decoration: none;
     line-height: 23px;
     color: rgb(110, 110, 110);
+
+    color: var(--back-button);
 }
 
 .back:hover {
     color: #0D0C22;
+
+    color: var(--back-hover);
 }
 
 h2 {
@@ -79,6 +88,8 @@ h2 {
     padding-bottom: 8px;
     -webkit-transition: all 200ms ease;
     transition: all 200ms ease;
+
+    color: var(--font-link);
 }
 
 a.link:hover {
@@ -86,10 +97,14 @@ a.link:hover {
     border-style: none none dashed;
     border-width: 2px;
     border-color: #0D0C22;
+
+    border-color: var(--font-link);
 }
 
 .link:visited {
     color: #0D0C22;
+
+    color: var(--font-link);
 }
 
 .made {
@@ -101,6 +116,7 @@ marquee {
     font-size: 12px;
     background-color: rgb(238, 238, 238);
     padding: 4px;
+    background-color: var(--marqu);
 }
 
 span.comingsoon {
@@ -108,8 +124,108 @@ span.comingsoon {
     font-style: italic
 }
 
-@media only screen and (min-width: 768px) {
+
+
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+
+    --font-color: #0D0C22;
+    --bg-color: #fff;
+    --font-sub: #0D0C22;
+    --font-link: #0D0C22;
+    --button-color: #EEEEEE;
+    --button-hov: rgb(222, 222, 222);
+    --marqu: rgb(238, 238, 238);
+
+    --back-button: rgb(110, 110, 110);
+    --back-hover: #0D0C22;
+    
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+
+    --font-color: #f2f2f2;
+    --bg-color: #000000;
+    --font-sub: #8E8E93;
+    --font-link: #007AFF;
+    --button-color: #2C2C2E;
+    --button-hov: rgb(37, 37, 39);
+    --marqu: #2C2C2E;
+
+    --back-button: rgb(110, 110, 110);
+    --back-hover: #f2f2f2;
+}
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  
+  }
+  .strong {
+    margin-right: 7px;
+    font-size: 12px;
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 36px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 14px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 14px;
+  }
+  
+  input:checked + .slider {
+    background-color: #007AFF;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  @media only screen and (min-width: 768px) {
     .made {
         text-align: center;
+    }
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

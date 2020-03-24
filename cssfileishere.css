@@ -25,6 +25,9 @@ body {
     font-weight: normal;
     line-height: 19px;
     color: #0D0C22;
+    
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 .container {
@@ -47,6 +50,8 @@ h1 {
     font-size: 18px;
     line-height: 25px;
     margin-bottom: 5px;
+
+    color: var(--font-sub);
 }
 
 h2 {
@@ -59,6 +64,8 @@ h2 {
 
 .intro {
     margin-bottom: 25px;
+
+    color: var(--font-sub);
 }
 
 .button {
@@ -74,10 +81,15 @@ h2 {
     cursor: pointer;
     font-weight: 600;
     margin-bottom: 61px;
+
+    background-color: var(--button-color);
+    color: var(--font-color);
 }
 
 .button:hover {
     background-color: rgb(222, 222, 222);
+
+    background-color: var(--button-hov);
     /*box-shadow: 2px 2px 8px rgb(180, 180, 180);*/
 }
 
@@ -88,6 +100,9 @@ a.email {
     padding-bottom: 8px;
     -webkit-transition: all 200ms ease;
     transition: all 200ms ease;
+    font-weight: 600;
+
+    color: var(--font-link);
 }
 
 a.email:hover {
@@ -95,10 +110,13 @@ a.email:hover {
     border-style: none none dashed;
     border-width: 2px;
     border-color: #0D0C22;
+
+    border-color: var(--font-link);
 }
 
 .toplink {
     margin-bottom: 16px;
+    color: var(--font-sub);
 }
 
 .midlink {
@@ -113,6 +131,8 @@ a.email:hover {
     padding-bottom: 8px;
     -webkit-transition: all 200ms ease;
     transition: all 200ms ease;
+
+    color: var(--font-link);
 }
 
 a.link:hover {
@@ -120,10 +140,14 @@ a.link:hover {
     border-style: none none dashed;
     border-width: 2px;
     border-color: #0D0C22;
+
+    border-color: var(--font-link);
 }
 
 .link:visited {
     color: #0D0C22;
+    
+    color: var(--font-link);
 }
 
 .made {
@@ -135,10 +159,106 @@ marquee {
     font-size: 12px;
     background-color: rgb(238, 238, 238);
     padding: 4px;
+    background-color: var(--marqu);
 }
 
-@media only screen and (min-width: 768px) {
+
+
+
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+
+    --font-color: #0D0C22;
+    --bg-color: #fff;
+    --font-sub: #0D0C22;
+    --font-link: #0D0C22;
+    --button-color: #EEEEEE;
+    --button-hov: rgb(222, 222, 222);
+    --marqu: rgb(238, 238, 238);
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+
+    --font-color: #f2f2f2;
+    --bg-color: #000000;
+    --font-sub: #8E8E93;
+    --font-link: #007AFF;
+    --button-color: #2C2C2E;
+    --button-hov: rgb(37, 37, 39);
+    --marqu: #2C2C2E;
+}
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  
+  }
+  .strong {
+    margin-right: 7px;
+    font-size: 12px;
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 36px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 14px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 14px;
+  }
+  
+  input:checked + .slider {
+    background-color: #007AFF;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  @media only screen and (min-width: 768px) {
     .made {
         text-align: center;
     }
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
+
